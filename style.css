@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "poppins", sans-serif;
+  text-decoration: none;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to bottom, #000000, #3900ff);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .judul {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+}
+
+.container .judul h1 {
+  font-size: 2.3rem;
+  text-shadow: 1px 1px 2px #fff;
+  letter-spacing: 3px;
+}
+
+.container .judul small {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.container .judul .border {
+  display: inline-block;
+  position: relative;
+}
+
+.container .judul .border::before,
+.border::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 50%; /* Sesuaikan dengan lebar yang diinginkan */
+  border-bottom: 2px solid #fff;
+}
+
+.container .judul .border::before {
+  left: 0;
+}
+
+.container .judul .border::after {
+  right: 0;
+}
+
+.container .konten {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container .konten a {
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 2rem;
+  width: 250px;
+  height: 50px;
+  background: rgba(150, 150, 150, 0.3);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: border-color cubic-bezier(0.175, 0.885, 0.32, 1.275) ease;
+  animation: kelap-kelip 5s infinite;
+}
+
+@keyframes kelap-kelip {
+  0%,
+  100% {
+    border-color: red;
+  }
+  25% {
+    border-color: yellow;
+  }
+  50% {
+    border-color: #00ff1a;
+  }
+  75% {
+    border-color: #00fbff;
+  }
+}
+
+.container .konten a:hover {
+  color: #000;
+  background-color: #ffffff;
+  font-size: 1.3rem;
+}
+
+.container .konten a:active {
+  transform: scale(1.1);
+}
+
+.container .sosmed {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.container .sosmed a {
+  color: #fff;
+}
+
+/* MEDIA QUERY */
+
+@media (max-width: 768px) {
+  html {
+    font-size: 85%;
+  }
+
+  .container .konten {
+    width: 350px;
+  }
+}
